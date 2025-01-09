@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: HotelBook_Backend
+  #server:
+    #port: 9192
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/hotelbook_db?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+    show-sql: true
+
+    hibernate:
+      ddl-auto: update
+
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+      file-size-threshold: 2KB
