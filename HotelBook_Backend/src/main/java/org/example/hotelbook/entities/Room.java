@@ -21,7 +21,7 @@ public class Room {
     private BigDecimal roomPrice;
     private boolean isBooked=false;
 
-    @Lob
+    @Lob  // (Large Objects) For storing binary data
     private Blob photo;
 
     @OneToMany(mappedBy="room", fetch = FetchType.LAZY, cascade = CascadeType.ALL) //cascade : means that any update or delete of the room will affect(update or delete) the bookingRoom as well
